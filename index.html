@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ATEM & STREAMING 교육 세미나 만족도 설문</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<!-- survey-config: {"title":"ATEM & STREAMING 교육 세미나","subtitle":"만족도 설문","description":"모든 문항은 선택형입니다. 솔직한 답변이 큰 도움이 됩니다.","notice":"설문 결과는 익명으로 처리되며, 세미나 운영 개선에만 활용됩니다.","appsScriptUrl":"https://script.google.com/macros/s/AKfycbxlBxHrJzo__DDm5vE3GGewEpLdDgMs_5mLbhr0BKqDGw_sRSn7gar0nSfwr0oZmVZn/exec","accentColor":"#b6fc53","bgColor":"#0c0c0d","questions":[{"id":1,"section":"세미나 운영","type":"yn","fieldName":"궁금증해결","text":"이번 교육을 통해 궁금하셨던 부분이 충분히 해결되었나요?","options":["네","아니요"]},{"id":2,"section":"","type":"single","fieldName":"프로그램만족도","text":"교육의 만족도는 어떠셨나요?","options":["매우 만족","만족","보통","아쉬움","매우 아쉬움"]},{"id":3,"section":"","type":"single","fieldName":"체험시간","text":"교육 시간은 적당했나요?","options":["부족함","적당함","길었음"]},{"id":4,"section":"","type":"yn","fieldName":"교육행사의 도움","text":"정기적인 교육행사가 진행된다면 도움이 될까요?","options":["네","아니요"]},{"id":5,"section":"구매 전환","type":"single","fieldName":"구매의향","text":"본 교육행사가 향후 제품 활용 및 구매 결정에 도움이 되었나요?","options":["구매 의향 생겼다","아직 고민 중","구매 생각 없다"]},{"id":6,"section":"","type":"multi","fieldName":"인지경로","text":"본 행사를 어떤 경로로 알게 되셨나요? (복수 선택 가능)","options":["인스타그램","페이스북","이메일","기타"]},{"id":7,"section":"기타의견","type":"text","fieldName":"기타의견","text":"기타 의견이 있으시거나, 추후 교육을 희망하시는 블랙매직디자인 제품이나 기술이 있으실 경우 아래에 기재해 주시기 바랍니다(어떤 의견이라도 소중하게 듣겠습니다). (선택)","options":[]}]} -->
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{--bg:#0c0c0d;--surface:#141416;--surface2:#1c1c1f;--border:rgba(255,255,255,0.1);--text:#f5f4f2;--text2:#d8d7d5;--text3:#999897;--accent:#b6fc53;--accent-dim:rgba(243,146,0,0.08);}
+:root{--bg:#0c0c0d;--surface:#141416;--surface2:#1c1c1f;--border:rgba(255,255,255,0.1);--text:#f5f4f2;--text2:#d8d7d5;--text3:#999897;--accent:#b6fc53;--accent-dim:#b6fc531a;--accent-hover:#b6fc5380;--accent-border:#b6fc534d;--accent-border-light:#b6fc5326;}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:60px 24px;display:flex;justify-content:center;}
 .wrap{width:100%;max-width:680px;}
 .form-header{margin-bottom:32px;}
-.badge{display:inline-block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:600;padding:5px 10px;border:1px solid rgba(243,146,0,0.3);border-radius:2px;background:var(--accent-dim);margin-bottom:16px;}
+.badge{display:inline-block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:600;padding:5px 10px;border:1px solid var(--accent-border);border-radius:2px;background:var(--accent-dim);margin-bottom:16px;}
 .form-header h1{font-size:26px;font-weight:700;margin-bottom:8px;}
 .form-header p{font-size:15px;color:var(--text2);line-height:1.6;}
-.notice{padding:14px 18px;background:var(--accent-dim);border:1px solid rgba(243,146,0,0.15);border-radius:3px;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:28px;}
+.notice{padding:14px 18px;background:var(--accent-dim);border:1px solid var(--accent-border-light);border-radius:3px;font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:28px;}
 .progress-wrap{margin-bottom:28px;}
 .progress-label{font-size:13px;color:var(--text2);display:flex;justify-content:space-between;margin-bottom:8px;}
 .progress-bar{height:3px;background:var(--surface2);border-radius:2px;}
@@ -25,17 +26,20 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 .options{display:flex;flex-direction:column;gap:8px;}
 .opt{padding:13px 16px;border-radius:3px;border:1.5px solid var(--border);background:var(--surface);font-size:15px;color:var(--text2);cursor:pointer;display:flex;align-items:center;gap:12px;transition:border-color .15s,background .15s,color .15s;user-select:none;}
 .opt .dot{width:18px;height:18px;border-radius:50%;flex-shrink:0;border:1.5px solid rgba(255,255,255,0.2);transition:border-color .15s,background .15s;}
-.opt:hover{border-color:rgba(243,146,0,0.5);color:var(--text);}
+.opt:hover{border-color:var(--accent-hover);color:var(--text);}
 .opt.on{border-color:var(--accent);background:var(--accent-dim);color:var(--text);}
 .opt.on .dot{border-color:var(--accent);background:var(--accent);}
 .opts-row{display:flex;flex-wrap:wrap;gap:8px;}
 .opt-chip{padding:10px 16px;border-radius:3px;border:1.5px solid var(--border);background:var(--surface);font-size:14px;color:var(--text2);cursor:pointer;transition:border-color .15s,background .15s,color .15s;user-select:none;}
-.opt-chip:hover{border-color:rgba(243,146,0,0.5);color:var(--text);}
+.opt-chip:hover{border-color:var(--accent-hover);color:var(--text);}
 .opt-chip.on{border-color:var(--accent);background:var(--accent-dim);color:var(--accent);}
 .yn-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
 .opt-yn{padding:13px 16px;border-radius:3px;text-align:center;border:1.5px solid var(--border);background:var(--surface);font-size:14px;color:var(--text2);cursor:pointer;transition:border-color .15s,background .15s,color .15s;user-select:none;}
-.opt-yn:hover{border-color:rgba(243,146,0,0.5);color:var(--text);}
+.opt-yn:hover{border-color:var(--accent-hover);color:var(--text);}
 .opt-yn.on{border-color:var(--accent);background:var(--accent-dim);color:var(--accent);}
+.q-textarea{width:100%;min-height:100px;background:var(--surface);border:1.5px solid var(--border);border-radius:3px;color:var(--text);font-family:'Noto Sans KR',sans-serif;font-size:15px;padding:14px 16px;resize:vertical;outline:none;transition:border-color .15s;line-height:1.6;}
+.q-textarea::placeholder{color:var(--text3);}
+.q-textarea:focus{border-color:var(--accent-hover);}
 .submit-wrap{margin-top:28px;}
 .submit-btn{width:100%;padding:17px;background:var(--accent);color:#0c0c0d;border:none;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;border-radius:3px;letter-spacing:.5px;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .2s;}
 .submit-btn:hover{opacity:.88;}
@@ -43,7 +47,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 .submit-note{font-size:13px;color:var(--text3);text-align:center;margin-top:10px;}
 .success{display:none;text-align:center;padding:80px 24px;}
 .success.show{display:block;}
-.success-icon{width:60px;height:60px;background:var(--accent-dim);border:1px solid rgba(243,146,0,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:24px;}
+.success-icon{width:60px;height:60px;background:var(--accent-dim);border:1px solid var(--accent-border-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:24px;}
 .success h2{font-size:22px;font-weight:700;margin-bottom:10px;}
 .success p{font-size:15px;color:var(--text2);line-height:1.8;}
 @media(max-width:480px){body{padding:32px 16px;}.yn-row{grid-template-columns:1fr;}}
@@ -62,16 +66,16 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
     <div class="progress-label"><span>응답 진행도</span><span id="prog-text">0 / 6 완료</span></div>
     <div class="progress-bar"><div class="progress-fill" id="prog-fill"></div></div>
   </div>
-  <div style="font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#b6fc53;font-weight:600;margin:28px 0 14px;padding-bottom:10px;border-bottom:1px solid rgba(243,146,0,0.15)">세미나 운영</div><div class="q-card"><div class="q-num">Q 01</div><div class="q-text">이번 교육을 통해 궁금하셨던 부분이 충분히 해결되었나요?</div><div class="yn-row" id="q10"><div class="opt-yn" data-v="네">네</div><div class="opt-yn" data-v="아니요">아니요</div></div></div>
-<div class="q-card"><div class="q-num">Q 02</div><div class="q-text">교육의 만족도는 어떠셨나요?</div><div class="options" id="q1"><div class="opt" data-v="매우 만족"><span class="dot"></span>매우 만족</div><div class="opt" data-v="만족"><span class="dot"></span>만족</div><div class="opt" data-v="보통"><span class="dot"></span>보통</div><div class="opt" data-v="아쉬움"><span class="dot"></span>아쉬움</div><div class="opt" data-v="매우 아쉬움"><span class="dot"></span>매우 아쉬움</div></div></div>
-<div class="q-card"><div class="q-num">Q 03</div><div class="q-text">교육 시간은 적당했나요?</div><div class="options" id="q4"><div class="opt" data-v="부족함"><span class="dot"></span>부족함</div><div class="opt" data-v="적당함"><span class="dot"></span>적당함</div><div class="opt" data-v="길었음"><span class="dot"></span>길었음</div></div></div>
-<div class="q-card"><div class="q-num">Q 04</div><div class="q-text">정기적인 교육행사가 진행된다면 도움이 될까요?</div><div class="yn-row" id="q7"><div class="opt-yn" data-v="네">네</div><div class="opt-yn" data-v="아니요">아니요</div></div></div>
-<div style="font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#b6fc53;font-weight:600;margin:28px 0 14px;padding-bottom:10px;border-bottom:1px solid rgba(243,146,0,0.15)">구매 전환</div><div class="q-card"><div class="q-num">Q 05</div><div class="q-text">본 교육행사가 향후 제품 활용 및 구매 결정에 도움이 되었나요?</div><div class="options" id="q5"><div class="opt" data-v="구매 의향 생겼다"><span class="dot"></span>구매 의향 생겼다</div><div class="opt" data-v="아직 고민 중"><span class="dot"></span>아직 고민 중</div><div class="opt" data-v="구매 생각 없다"><span class="dot"></span>구매 생각 없다</div></div></div>
-<div class="q-card"><div class="q-num">Q 06</div><div class="q-text">본 행사를 어떤 경로로 알게 되셨나요? (복수 선택 가능)</div><div class="opts-row" id="q8"><div class="opt-chip" data-v="인스타그램">인스타그램</div><div class="opt-chip" data-v="페이스북">페이스북</div><div class="opt-chip" data-v="이메일">이메일</div><div class="opt-chip" data-v="기타">기타</div></div></div>
-<div style="font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#b6fc53;font-weight:600;margin:28px 0 14px;padding-bottom:10px;border-bottom:1px solid rgba(243,146,0,0.15)">기타의견</div><div class="q-card"><div class="q-num">Q 07</div><div class="q-text">기타 의견이 있으시거나, 추후 교육을 희망하시는 블랙매직디자인 제품이나 기술이 있으실 경우 아래에 기재해 주시기 바랍니다(어떤 의견이라도 소중하게 듣겠습니다). <span style="font-size:12px;color:var(--text3);">(선택)</span></div><textarea id="q9-text" placeholder="자유롭게 작성해 주세요." style="width:100%;background:var(--surface);border:1.5px solid var(--border);color:var(--text);padding:14px 16px;font-size:15px;font-family:inherit;outline:none;border-radius:3px;resize:vertical;min-height:120px;line-height:1.6;transition:border-color .15s;" onfocus="this.style.borderColor='rgba(243,146,0,0.5)'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'"></textarea></div>
+  <div style="font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#b6fc53;font-weight:600;margin:28px 0 14px;padding-bottom:10px;border-bottom:1px solid #b6fc5326">세미나 운영</div><div class="q-card"><div class="q-num">Q 01</div><div class="q-text">이번 교육을 통해 궁금하셨던 부분이 충분히 해결되었나요?</div><div class="yn-row" id="q1"><div class="opt-yn" data-v="네">네</div><div class="opt-yn" data-v="아니요">아니요</div></div></div>
+<div class="q-card"><div class="q-num">Q 02</div><div class="q-text">교육의 만족도는 어떠셨나요?</div><div class="options" id="q2"><div class="opt" data-v="매우 만족"><span class="dot"></span>매우 만족</div><div class="opt" data-v="만족"><span class="dot"></span>만족</div><div class="opt" data-v="보통"><span class="dot"></span>보통</div><div class="opt" data-v="아쉬움"><span class="dot"></span>아쉬움</div><div class="opt" data-v="매우 아쉬움"><span class="dot"></span>매우 아쉬움</div></div></div>
+<div class="q-card"><div class="q-num">Q 03</div><div class="q-text">교육 시간은 적당했나요?</div><div class="options" id="q3"><div class="opt" data-v="부족함"><span class="dot"></span>부족함</div><div class="opt" data-v="적당함"><span class="dot"></span>적당함</div><div class="opt" data-v="길었음"><span class="dot"></span>길었음</div></div></div>
+<div class="q-card"><div class="q-num">Q 04</div><div class="q-text">정기적인 교육행사가 진행된다면 도움이 될까요?</div><div class="yn-row" id="q4"><div class="opt-yn" data-v="네">네</div><div class="opt-yn" data-v="아니요">아니요</div></div></div>
+<div style="font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#b6fc53;font-weight:600;margin:28px 0 14px;padding-bottom:10px;border-bottom:1px solid #b6fc5326">구매 전환</div><div class="q-card"><div class="q-num">Q 05</div><div class="q-text">본 교육행사가 향후 제품 활용 및 구매 결정에 도움이 되었나요?</div><div class="options" id="q5"><div class="opt" data-v="구매 의향 생겼다"><span class="dot"></span>구매 의향 생겼다</div><div class="opt" data-v="아직 고민 중"><span class="dot"></span>아직 고민 중</div><div class="opt" data-v="구매 생각 없다"><span class="dot"></span>구매 생각 없다</div></div></div>
+<div class="q-card"><div class="q-num">Q 06</div><div class="q-text">본 행사를 어떤 경로로 알게 되셨나요? (복수 선택 가능)</div><div class="opts-row" id="q6"><div class="opt-chip" data-v="인스타그램">인스타그램</div><div class="opt-chip" data-v="페이스북">페이스북</div><div class="opt-chip" data-v="이메일">이메일</div><div class="opt-chip" data-v="기타">기타</div></div></div>
+<div style="font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#b6fc53;font-weight:600;margin:28px 0 14px;padding-bottom:10px;border-bottom:1px solid #b6fc5326">기타의견</div><div class="q-card"><div class="q-num">Q 07<span style="font-size:10px;color:#999897;font-weight:400;letter-spacing:0;text-transform:none;margin-left:6px;">선택</span></div><div class="q-text">기타 의견이 있으시거나, 추후 교육을 희망하시는 블랙매직디자인 제품이나 기술이 있으실 경우 아래에 기재해 주시기 바랍니다(어떤 의견이라도 소중하게 듣겠습니다). (선택)</div><textarea class="q-textarea" id="q7" placeholder="자유롭게 작성해 주세요..."></textarea></div>
   <div class="submit-wrap">
     <button class="submit-btn off" id="submit-btn"><span>설문 제출하기</span><span>→</span></button>
-    <p class="submit-note" id="submit-note">모든 문항(Q1–Q7)을 선택하시면 제출 버튼이 활성화됩니다.</p>
+    <p class="submit-note" id="submit-note">필수 문항(Q1 기준 선택형 6개)을 완료하시면 제출 버튼이 활성화됩니다.</p>
   </div>
 </div>
 <div class="success" id="success">
@@ -81,18 +85,24 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 </div>
 </div>
 <script>
-var ans = { "q10":null,"q1":null,"q4":null,"q7":null,"q5":null,"q8":[] };
+var ans = { "q1":null,"q2":null,"q3":null,"q4":null,"q5":null,"q6":[],"q7":null };
 
-  document.getElementById('q10') && document.getElementById('q10').querySelectorAll('.opt,.opt-yn').forEach(function(el){
-    el.onclick=function(){
-      document.getElementById('q10').querySelectorAll('.opt,.opt-yn').forEach(function(o){o.classList.remove('on');});
-      el.classList.add('on'); ans["q10"]=el.getAttribute('data-v'); update();
-    };
-  });
   document.getElementById('q1') && document.getElementById('q1').querySelectorAll('.opt,.opt-yn').forEach(function(el){
     el.onclick=function(){
       document.getElementById('q1').querySelectorAll('.opt,.opt-yn').forEach(function(o){o.classList.remove('on');});
       el.classList.add('on'); ans["q1"]=el.getAttribute('data-v'); update();
+    };
+  });
+  document.getElementById('q2') && document.getElementById('q2').querySelectorAll('.opt,.opt-yn').forEach(function(el){
+    el.onclick=function(){
+      document.getElementById('q2').querySelectorAll('.opt,.opt-yn').forEach(function(o){o.classList.remove('on');});
+      el.classList.add('on'); ans["q2"]=el.getAttribute('data-v'); update();
+    };
+  });
+  document.getElementById('q3') && document.getElementById('q3').querySelectorAll('.opt,.opt-yn').forEach(function(el){
+    el.onclick=function(){
+      document.getElementById('q3').querySelectorAll('.opt,.opt-yn').forEach(function(o){o.classList.remove('on');});
+      el.classList.add('on'); ans["q3"]=el.getAttribute('data-v'); update();
     };
   });
   document.getElementById('q4') && document.getElementById('q4').querySelectorAll('.opt,.opt-yn').forEach(function(el){
@@ -101,51 +111,46 @@ var ans = { "q10":null,"q1":null,"q4":null,"q7":null,"q5":null,"q8":[] };
       el.classList.add('on'); ans["q4"]=el.getAttribute('data-v'); update();
     };
   });
-  document.getElementById('q7') && document.getElementById('q7').querySelectorAll('.opt,.opt-yn').forEach(function(el){
-    el.onclick=function(){
-      document.getElementById('q7').querySelectorAll('.opt,.opt-yn').forEach(function(o){o.classList.remove('on');});
-      el.classList.add('on'); ans["q7"]=el.getAttribute('data-v'); update();
-    };
-  });
   document.getElementById('q5') && document.getElementById('q5').querySelectorAll('.opt,.opt-yn').forEach(function(el){
     el.onclick=function(){
       document.getElementById('q5').querySelectorAll('.opt,.opt-yn').forEach(function(o){o.classList.remove('on');});
       el.classList.add('on'); ans["q5"]=el.getAttribute('data-v'); update();
     };
   });
-  document.getElementById('q8') && document.getElementById('q8').querySelectorAll('.opt-chip').forEach(function(el){
+
+  document.getElementById('q6') && document.getElementById('q6').querySelectorAll('.opt-chip').forEach(function(el){
     el.onclick=function(){
       el.classList.toggle('on');
       var v=el.getAttribute('data-v');
-      if(el.classList.contains('on')){ ans["q8"].push(v); }
-      else { ans["q8"]=ans["q8"].filter(function(x){return x!==v;}); }
+      if(el.classList.contains('on')){ ans["q6"].push(v); }
+      else { ans["q6"]=ans["q6"].filter(function(x){return x!==v;}); }
       update();
     };
   });
 document.getElementById('submit-btn').onclick = function() {
   if (this.classList.contains('off')) return;
   var payload = {
-    "궁금증해결": ans["q10"],
-    "프로그램만족도": ans["q1"],
-    "체험시간": ans["q4"],
-    "구매망설임이유": ans["q7"],
+    "궁금증해결": ans["q1"],
+    "프로그램만족도": ans["q2"],
+    "체험시간": ans["q3"],
+    "교육행사의 도움": ans["q4"],
     "구매의향": ans["q5"],
-    "인지경로": ans["q8"].join(', '),
-    "기타의견": document.getElementById('q9-text').value
+    "인지경로": ans["q6"].join(', '),
+    "기타의견": (document.getElementById('q7') ? document.getElementById('q7').value.trim() : '')
   };
   console.log('제출:', payload);
-  /* Apps Script URL을 에디터에서 입력해 주세요 */
+  fetch("https://script.google.com/macros/s/AKfycbxlBxHrJzo__DDm5vE3GGewEpLdDgMs_5mLbhr0BKqDGw_sRSn7gar0nSfwr0oZmVZn/exec",{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(payload)});
   document.getElementById('survey').style.display = 'none';
   document.getElementById('success').classList.add('show');
 };
 function update() {
   var done = 0;
-  if(ans["q10"]) done++;
   if(ans["q1"]) done++;
+  if(ans["q2"]) done++;
+  if(ans["q3"]) done++;
   if(ans["q4"]) done++;
-  if(ans["q7"]) done++;
   if(ans["q5"]) done++;
-  if(ans["q8"].length>0) done++;
+  if(ans["q6"].length>0) done++;
   document.getElementById('prog-fill').style.width = (done / 6 * 100) + '%';
   document.getElementById('prog-text').textContent = done + ' / 6 완료';
   var btn = document.getElementById('submit-btn');
@@ -154,9 +159,9 @@ function update() {
     document.getElementById('submit-note').textContent = '모든 문항 완료! 제출해 주세요.';
   } else {
     btn.classList.add('off');
-    document.getElementById('submit-note').textContent = '모든 문항(Q1-Q6)을 선택하시면 제출 버튼이 활성화됩니다.';
   }
 }
+
 </script>
 </body>
 </html>
